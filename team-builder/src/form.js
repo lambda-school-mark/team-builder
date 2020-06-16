@@ -1,11 +1,25 @@
 import React from "react";
 
-export default function Form() {
+function Form(props) {
+  const { values, onInputChange, onSubmit } = props;
+
   return (
-    <form>
-      <input type="text" name="name" placeholder="Enter Name"></input>
-      <input type="text" name="name" placeholder="Enter Email"></input>
-      <select>
+    <form onSubmit={onSubmit}>
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter Name"
+        value={values.name}
+        onChange={onInputChange}
+      ></input>
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter Email"
+        value={values.email}
+        onChange={onInputChange}
+      ></input>
+      <select name="role" value={values.role} onChange={onInputChange}>
         <option>Trucker</option>
         <option>School</option>
         <option>Coder</option>
@@ -14,3 +28,4 @@ export default function Form() {
     </form>
   );
 }
+export default Form;
