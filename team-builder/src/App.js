@@ -9,6 +9,11 @@ function App() {
       email: "timbo@timz@mail.com",
       role: "Full Time Daddy",
     },
+    {
+      name: "Bob",
+      email: "bob@bobz@mail.com",
+      role: "Construction",
+    },
   ];
 
   const { memberList, setMemberList } = useState(initialFriendsList);
