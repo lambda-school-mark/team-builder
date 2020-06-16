@@ -3,7 +3,18 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  const { memberList, setMemberList } = useState();
+  const initialFriendsList = [
+    {
+      name: "Timmy",
+      email: "timbo@timz@mail.com",
+      role: "Full Time Daddy",
+    },
+  ];
+
+  const { memberList, setMemberList } = useState(initialFriendsList);
+
+  console.log(memberList);
+
   return (
     <div className="App">
       <header className="App-header">
