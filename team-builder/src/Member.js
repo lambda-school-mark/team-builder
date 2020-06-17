@@ -2,6 +2,7 @@ import React from "react";
 
 function Member(props) {
   const { details } = props;
+
   return (
     <div>
       <div>{details.name}</div>
